@@ -6,11 +6,12 @@
   "configurations": [
 
 
+
     {
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/20th Sept./async.js"
+      "program": "${workspaceFolder}/21st Sept./class-extend.js"
     }
   ]
 }
