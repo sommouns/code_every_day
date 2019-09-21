@@ -1,0 +1,18 @@
+<script>
+  // 1 创建ajax对象
+  var xhr = new XMLHttpRequest()
+
+  // 2 打开要发送的地址
+  xhr.open('post', '.....')
+
+  // 3 发送
+  xhr.send()
+  console.log(xhr.readyState)
+
+  // 4 监听回调
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log(JSON.parse(xhr.responseText))
+    }
+  }
+</script>
