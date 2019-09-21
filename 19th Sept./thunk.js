@@ -3,18 +3,6 @@ var thunkify = require('thunkify');
 // var readFile = thunkify(fs.readFile);
 var path = require('path')
 
-// function run(gen){
-//   var g = gen();
-//   function next(data){
-//       var result = g.next(data);
-//       if(result.done) return resule.value;
-//       result.value.then(function(data){
-//           next(data);
-//       });
-//   }
-//   next();
-// }
-// run(gen);
 const thunk = function (fn) {
   return function (...args) {
     return function (callback) {
