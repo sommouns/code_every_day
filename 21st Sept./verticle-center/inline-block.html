@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>水平垂直居中对齐</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .wrap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: green;
+        text-align: center;
+    }
+   
+    .test {
+        display: inline-block;
+        vertical-align: middle;
+        background: pink;
+        padding: 20px;
+    }
+    .wrap::after {
+        width: 0px;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        content: ''
+    }
+    .box {
+      background:black; 
+      color:white; 
+      padding-left:20px;
+    } 
+    .dot{
+      display:inline-block; 
+      width:4px; 
+      height:4px; 
+      background:white;
+      vertical-align:top;
+    }
+    </style>
+</head>
+<body>
+
+<div class="box"> 
+  <span class="dot"></span> 我是一段卡哇伊的文字。 
+</div>
+<div style="background: red; height: 200px;">
+  <span style="display: inline-block;vertical-align: middle; height: 40px">12123</span><div style="height: 100%;display:inline-block;width: 0; vertical-align: middle;"></div>
+</div>
+</body>

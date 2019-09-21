@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            /*水平方向居中*/
+            justify-content: center;
+            /*垂直方向居中*/
+            align-items: center;
+            /*给父元素设置一个高度值*/
+            min-height: 98vh;
+        }
+        .child {
+            /*为了好看一点给其设置了宽度，不设置也不影响*/
+            width: 10rem;
+            border: .4rem solid black;
+            margin: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="child">你好</div>
+</div>
+</body>
+</html>

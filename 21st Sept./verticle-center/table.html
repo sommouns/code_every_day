@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        .parent {
+            display: table;
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+        }
+        .child {
+            display: table-cell;
+            /*该属性定义行内元素的基线相对于该元素所在行的基线的垂直对齐*/
+            vertical-align: middle;
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class='child'>
+        hello world!
+    </div>
+</div>
+</body>
+</html>
