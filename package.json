@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sommouns/code_every_day#readme",
   "dependencies": {
     "co": "^4.6.0",
+    "cors": "^2.8.5",
     "thunkify": "^2.1.2"
   }
 }
