@@ -1,4 +1,4 @@
-const arr = [123, 3443, 1231, 23]
+const arr = [123, 3443, 1231, 23, 11]
 
 // 冒泡排序法
 function mySort(arr) {
@@ -35,4 +35,28 @@ function quickSort(arr) {
   }
   return quickSort(left).concat([pivot], quickSort(right))
 }
-console.log(quickSort(arr))
+
+function quickSortPro(arr,left,right){
+  var i=left;
+  var j=right;
+  var temp;
+  while(i<j) {
+      for (; i < j && arr[j] >= arr[left]; j--);
+      for (; i < j && arr[i] <= arr[left]; i++);
+      if (i < j) {
+          temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+      }
+  }
+  temp=arr[left];
+  arr[left]=arr[i];
+  arr[i]=temp;
+  if(i>left){
+    quickSortPro(arr,left,i-1);
+  }if(right>i){
+    quickSortPro(arr,i+1,right);
+  }
+}
+quickSortPro(arr, 0, 4)
+console.log(arr)
