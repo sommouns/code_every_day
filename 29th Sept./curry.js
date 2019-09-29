@@ -13,7 +13,7 @@ function createCurry(func, args) {
     if (_args.length < arity) {
       return createCurry.call(this, func, _args);
     }
-    
+
     // 参数收集完毕，则执行func
     return func.apply(this, _args);
   }
@@ -57,3 +57,8 @@ var mul = function (a, b, c) {
 var addCurry = createCurry(add)
 var res = addCurry(1)(2)
 console.log(res)
+
+// 主要用处
+// 延迟执行
+// 提高适用性
+// 固定易变元素
