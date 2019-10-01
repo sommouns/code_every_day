@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/29th Sept./curry.js"
+      "program": "${workspaceFolder}/Oct. 1st/proxy.js"
     }
   ]
 }
