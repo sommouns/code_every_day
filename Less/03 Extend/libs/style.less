@@ -1,0 +1,61 @@
+nav ul {
+  &:extend(.inline);
+  &:extend(.bar);
+  background: blue;
+}
+.inline {
+  color: red;
+}
+.bar {
+  line-height: 2em;
+  text-decoration: underline
+}
+.box :extend(.bar) :extend(.inline){}
+
+*.class {
+  color: blue
+}
+.noStar:extend(.class) {} 
+
+[title=identifier] {
+  color: blue;
+}
+
+
+.noQuote:extend([title=identifier]) {}
+.singleQuote:extend([title='identifier']) {}
+.doubleQuote:extend([title="identifier"]) {}
+
+.main {
+  height: 100px;
+  width: 100px;
+  background: red;
+  margin-bottom: 20px;
+  .sub {
+    height: 50px;
+    width: 11px;
+    background: green
+  }
+}
+.main2:extend(.main all){}
+
+
+@variable: .bucket;
+
+@{variable} {
+  color: orange
+}
+.some-class:extend(.bucket) {}
+
+@media screen {
+  .selector {  /* ruleset inside nested media - top level extend works */
+    color: blue;
+  }
+  @media (max-width: 1023px) {
+    .selector {  /* ruleset inside nested media - top level extend works */
+      color: green;
+    }
+  }
+}
+
+.topLevel:extend(.selector) {} /* top level extend matches everything */
