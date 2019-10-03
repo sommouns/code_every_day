@@ -1,0 +1,39 @@
+.my-mixin {
+  color: green;
+}
+.my-other-mixin() {
+  background: red;
+}
+.class {
+  .my-mixin;
+  .my-other-mixin;
+}
+
+#outer {
+  .inner {
+    color: red;
+  }
+}
+
+.c {
+  #outer .inner();
+}
+
+@mode: 'huge';
+#namespace when (true) {
+  background: green;
+  .mixin() { 
+    background: orange
+  }
+}
+
+#namespace {
+  .mixin() when (@mode=huge) { background: orange }
+}
+.foo {
+  color: beige;
+  font-size: 23px;
+}
+.important {
+  .foo() !important;
+}
