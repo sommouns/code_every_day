@@ -1,0 +1,47 @@
+.mixin (@a) when (lightness(@a) >= 50%) {
+  background: black
+}
+.mixin (@a) when (lightness(@a) < 50%) {
+  background: white
+}
+.class1 {.mixin(#fff)}
+.class1 {.mixin(#000)}
+
+.truth (@a) when (@a = true) {
+  color: red
+}
+.truth (@a) when (@a) {
+  color: green
+}
+.class {
+  .truth(true); // Will not match any of the above definitions.
+}
+.testWidth (@a, @b) when (@a < @b) {
+  width: @b
+}
+.testWidth (@a, @b) when (@a > @b) {
+  width: @a
+}
+.testWidth (@a, @b) when (default()) {
+  width: 0
+}
+.tw {
+  .testWidth(12, 10);
+  .testWidth(12, 20);
+  .testWidth(12, 12);
+}
+.logic (@a, @b) when (@a > 11px) and (@b > 11px) and (ispixel(@a)) {
+  height: 11px
+}
+.tl {
+  .logic(12px, 12px)
+}
+.calcTruth(@a, @b) {
+  @height: (@a + @b) / 2
+}
+.cc {
+  .calcTruth(43em, 123px);
+  & when (@height > 60) {
+    background: green
+  }
+}
