@@ -1,0 +1,10 @@
+.navbar .gb {
+  color: red;
+}
+.navbar {
+  color: grey;
+}
+.navbar .aa,
+.navbar .aa {
+  color: green;
+}
