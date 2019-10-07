@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{tjUo:function(e,n,o){"use strict";o.r(n);var t,c,d=o("ORyx"),i=o.n(d);document.body.appendChild((t=document.createElement("div"),c=document.createElement("button"),t.innerHTML=i.a.join(["Hello","webpack"]," "),c.innerHTML="Click me and check the console!",t.appendChild(c),t))}},[["tjUo",1,2]]]);
