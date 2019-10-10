@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  延迟加载
+</body>
+<script>
+function jsLazyLoad() {
+  var script = document.createElement('script')
+  script.src = './test.js'
+  document.body.appendChild(script)
+}
+setTimeout(() => {
+  jsLazyLoad()
+}, 5000);
+</script>
+</html>
