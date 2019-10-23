@@ -54,5 +54,4 @@ B.sibling = E
 D.sibling = B
 
 var res = cloneComplexLinkNode(A)
-
-console.log(res)
+debugger
