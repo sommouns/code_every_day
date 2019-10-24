@@ -4,7 +4,7 @@ class MinHeap {
     this.init(data)
   }
 
-  init(data) {
+  init(data = []) {
     for (let key = 0; key < data.length; key++) {
       this.insert(data[key])
     }
@@ -70,13 +70,19 @@ class MinHeap {
   print() {
     console.log(this.data)
   }
+
+  size() {
+    return this.data.length
+  }
 }
 
-var heap = new MinHeap([5, 4, 3, 2, 1])
-console.log(heap.remove())
-console.log(heap.remove())
-console.log(heap.remove())
-console.log(heap.remove())
-console.log(heap.remove())
-console.log(heap.remove())
-console.log(heap.remove())
+// var heap = new MinHeap([5, 4, 3, 2, 1])
+// console.log(heap.remove())
+// console.log(heap.remove())
+// console.log(heap.remove())
+// console.log(heap.remove())
+// console.log(heap.remove())
+// console.log(heap.remove())
+// console.log(heap.remove())
+
+module.exports = MinHeap

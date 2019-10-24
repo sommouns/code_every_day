@@ -4,7 +4,7 @@ class Maxheap {
     this.init(data)
   }
 
-  init(data) {
+  init(data = []) {
     for (let key = 0; key < data.length; key++) {
       this.insert(data[key])
     }
@@ -67,14 +67,20 @@ class Maxheap {
   print() {
     console.log(this.data)
   }
+
+  size() {
+    return this.data.length
+  }
 }
 
-var heap = new Maxheap([1, 2, 3, 4, 5])
-console.log(heap.remove())
-console.log(heap.remove())
-heap.insert(6)
-console.log(heap.remove())
-console.log(heap.remove())
-console.log(heap.remove())
-console.log(heap.remove())
-console.log(heap.remove())
+// var heap = new Maxheap([1, 2, 3, 4, 5])
+// console.log(heap.remove())
+// console.log(heap.remove())
+// heap.insert(6)
+// console.log(heap.remove())
+// console.log(heap.remove())
+// console.log(heap.remove())
+// console.log(heap.remove())
+// console.log(heap.remove())
+
+module.exports = Maxheap
