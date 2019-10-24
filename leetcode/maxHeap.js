@@ -20,7 +20,11 @@ class Maxheap {
   remove() {
     if (!this.data.length) return null
     var max = this.data[0]
-    this.data[0] = this.data.pop()
+    if (this.data.length > 1) {
+      this.data[0] = this.data.pop()
+    } else {
+      this.data.pop()
+    }
     this.adjust_remove()
     return max
   }
@@ -41,7 +45,10 @@ class Maxheap {
   adjust_remove() {
     var leftNodeIndex = 1
     var rightNodeIndex = 2
-    var curPosition = this.data[leftNodeIndex] > this.data[rightNodeIndex] ? leftNodeIndex : rightNodeIndex
+    var curPosition = this.data[rightNodeIndex]
+      && this.data[leftNodeIndex] < this.data[rightNodeIndex]
+      ? rightNodeIndex
+      : leftNodeIndex
     var parentIndex = (curPosition - 1) >> 1
     while (curPosition < this.data.length) {
       if (this.data[curPosition] <= this.data[parentIndex]) {
@@ -66,6 +73,8 @@ var heap = new Maxheap([1, 2, 3, 4, 5])
 console.log(heap.remove())
 console.log(heap.remove())
 heap.insert(6)
+console.log(heap.remove())
+console.log(heap.remove())
 console.log(heap.remove())
 console.log(heap.remove())
 console.log(heap.remove())
