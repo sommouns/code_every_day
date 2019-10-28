@@ -1,6 +1,6 @@
 function solutionOne(n) {
   var res = n
-  var flag = (n > 0) && ((res += solutionOne(n - 1)) >= 0)
+  { n && (res += solutionOne(n - 1)) }
   return res
 }
 function solutionTwo(n) {
