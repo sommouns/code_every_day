@@ -29,8 +29,8 @@
 
 Node.js上的event loop分为6个阶段：
 + timers 执行setTimeout()和setInterval()中**到期**的callback
-+ I/O callbacks 上一轮循环中有少数的I/O callback会被延迟到这一轮执行
-+ idle，prepare 队列的移动，仅内部
++ I/O callbacks  大部分执行都是timers 阶段或是setImmediate() 预先设定的并且出现异常的回调函数事件。
++ idle，prepare nodejs 内部函数调用。
 + poll 最为重要的阶段，执行I/O callback，在适当的条件下会阻塞
 + check 执行setImmediate的callback
 + close callbacks 执行close事件的callback，例如socket.on('close', func)

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    setTimeout(() => {
+      console.log('settimeout 1')
+    }, 0);
+    setTimeout(() => {
+      var pp = new Promise(function (resolve, reject) {
+        console.log('newpp')
+        resolve('pp')
+      })
+      pp.then(function (v) {
+        console.log(v)
+      })
+      setTimeout(() => {
+        console.log('settimeout 3')
+      }, 0);
+    }, 0);
+    var promise = new Promise(function (resolve, reject) {
+      console.log('999')
+      resolve(1)
+    })
+    var p2 = promise.then(function (v) {
+      console.log(v)
+      return v + 1
+    })
+    p2.then(function (v) {
+      console.log(v)
+      return v + 1
+    })
+  </script>
+</body>
+
+</html>
