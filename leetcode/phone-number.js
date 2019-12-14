@@ -26,4 +26,4 @@ function sortPhone(number) {
   return comb(arr)
 }
 
-console.log(sortPhone('234').length)
+console.log(sortPhone('345').length)
