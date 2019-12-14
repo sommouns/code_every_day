@@ -19,11 +19,11 @@ function sortPhone(number) {
     if (arr.length > 1) {
       comb(arr)
     }
-    console.log(1)
+
     return arr[0]
   }
 
   return comb(arr)
 }
 
-console.log(sortPhone('234').length)
+console.log(sortPhone('345').length)
