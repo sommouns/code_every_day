@@ -19,7 +19,7 @@ function sortPhone(number) {
     if (arr.length > 1) {
       comb(arr)
     }
-    console.log(1)
+
     return arr[0]
   }
 
